@@ -21,6 +21,16 @@ try {
 
 window.axios = require('axios');
 
+window.moment = require('moment');
+
+window.Noty = require('noty');
+
+Noty.overrideDefaults({
+    layout: 'topRight',
+    theme: 'mint',
+    timeout: 4000
+});
+
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
