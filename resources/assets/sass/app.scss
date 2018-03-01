@@ -7,3 +7,20 @@
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~vuetify/dist/vuetify.css";
+
+.error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.error--text {
+  color: #ff5252 !important;
+}
+.error--text input,
+.error--text textarea {
+  caret-color: #ff5252 !important;
+}
+.error--after::after {
+  background: #ff5252 !important;
+}
+
