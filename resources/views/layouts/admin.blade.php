@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
     <link href='https://unpkg.com/vuetify/dist/vuetify.min.css' rel="stylesheet">
     <script>
@@ -22,17 +22,14 @@
     </script>
 </head>
 <body>
-    <div id="app">
-        {{--<app-header></app-header>--}}
+    <div id="admin">
         <router-view></router-view>
-        <vue-toastr ref="toastr"></vue-toastr>
 
 
         @yield('content')
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-
+    <script src="{{ asset('js/admin.js') }}"></script>
 </body>
 </html>

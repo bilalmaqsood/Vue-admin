@@ -11,10 +11,19 @@
 |
 */
 
+Route::post('/login', 'Api\Admin\PassportController@login');
+Route::post('/logout', 'Auth\LoginController@logout');
+
+
+
+Route::get('/admin/{vue?}', function(){
+    return view('layouts.admin');
+});
+Route::get('/{vue?}', function(){
+    return view('layouts.app');
+})->where('vue', '^(?!.*api).*$[\/\w\.-]*');
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

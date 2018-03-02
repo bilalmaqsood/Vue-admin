@@ -28,18 +28,19 @@ Vue.use(Toastr);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
-Vue.component('vue-toastr', Toastr);
-Vue.component('app-header', require('./components/Header.vue'));
+Vue.component('admin-nav', require('./components/admin/_nav.vue'));
 
+
+import Admin from './components/Admin.vue';
+import Dashboard from './components/admin/Dashboard.vue';
 import router from './router'
 
 
-
 const app = new Vue({
-    el: '#app',
-    router
-});
+    base: '/admin',
+    router,
+    render: h => h(Dashboard)
+}).$mount('#admin');
 
 axios.interceptors.response.use(function (response) {
     return response;

@@ -32,8 +32,6 @@
 </template>
 
 <script>
-    import axios from 'axios'
-
     export default {
         data: () => ({
             valid: true,
@@ -52,13 +50,28 @@
 
         methods: {
             submit () {
+
                 if (this.$refs.form.validate()) {
                     // Native form submission is not yet supported
-                    axios.post('/api/submit', {
-                        email: this.email,
-                        password: this.password,
-                    })
+                    this.login();
                 }
+            },
+            login() {
+                axios.post('/login', {
+                    email: this.email,
+                    password: this.password
+                })
+                    .then(response => {
+                        if(response.status==200){
+                            this.$root.$refs.toastr.s("Login successful!");
+                            this.$router.push('/admin');
+                        }
+
+                    }).catch(error => {
+                    this.$root.$refs.toastr.e(error.response.statusText);
+                }).then(() => {
+                    this.loading = false;
+                });
             },
             clear () {
                 this.$refs.form.reset()
