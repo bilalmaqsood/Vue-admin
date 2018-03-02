@@ -21,8 +21,13 @@
     "moment": "^2.18.1",
     "noty": "^3.2.0-beta",
     "vue": "^2.1.10",
-    "vue-progressbar": "^0.7.3",
+    "nprogress": "^0.2.0",
+    "select": "^1.0.6",
+    "pusher-js": "^4.1.0",
+    "alertify.js": "^1.0.12",
+    "local-storage": "^1.4.2",
     "vue-router": "^3.0.1",
+    "vue-toastr": "^2.0.12",
     "vuetify": "^1.0.4",
     "vuex": "^2.3.1"
   }

@@ -9,7 +9,7 @@ export default new Router({
     routes: [
         // { path: '/', component: HomePage }, // doesn't exist yet!
         {
-            path: '/login',
+            path: '/admin/login',
             name: 'Login',
             component: Login
         }
