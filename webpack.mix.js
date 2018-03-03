@@ -14,4 +14,9 @@ let mix = require('laravel-mix');
 mix.js('resources/assets/js/app.js', 'public/js')
 mix.js('resources/assets/js/admin.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css')
-   .sass('resources/assets/sass/admin.scss', 'public/css');
+   .sass('resources/assets/sass/admin.scss', 'public/css')
+    .stylus('node_modules/vuetify/src/stylus/main.styl', 'public/css', {
+        use: [
+            require('rupture')()
+        ]
+    });

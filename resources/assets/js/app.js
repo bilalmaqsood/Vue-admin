@@ -28,6 +28,8 @@ Vue.use(Toastr);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+// Vue.component('admin-nav', require('./components/admin/_nav.vue'));
+
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('vue-toastr', Toastr);
 Vue.component('app-header', require('./components/Header.vue'));

@@ -17,8 +17,11 @@
 </template>
 
 <script>
-    import NProgress from 'nprogress'
+    import NProgress from 'nprogress';
+    import nav from './_nav.vue';
+
     export default {
+        components: { 'admin-nav' : nav},
         data: () => ({
             drawer: true
         }),
@@ -27,6 +30,9 @@
         },
         mounted(){
             NProgress.start();
+            setTimeout(function () {
+                NProgress.done();
+            },100);
         }
     }
 </script>

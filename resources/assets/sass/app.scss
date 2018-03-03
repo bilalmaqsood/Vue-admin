@@ -7,9 +7,10 @@
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import '~vue-toastr/src/vue-toastr';
+@import "~nprogress/nprogress";
 @import "~vuetify/dist/vuetify.css";
 
-@import '~vue-toastr/src/vue-toastr';
 
 
 .error {

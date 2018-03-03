@@ -3,7 +3,7 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 import Login from './components/Login.vue';
-import Admin from './components/Admin.vue';
+import usersIndex from './components/admin/users/index.vue';
 import Dashboard from './components/admin/Dashboard.vue';
 
 export default new Router({
@@ -11,13 +11,13 @@ export default new Router({
     routes: [
         // { path: '/', component: HomePage }, // doesn't exist yet!
         {
-            path: '/admin/login',
+            path: '/login',
             name: 'Login',
             component: Login
         }, {
             path: '/admin/users',
-            name: 'Admin',
-            component: Admin
+            name: 'users.index',
+            component: usersIndex
         },
         {
             path: '/admin',
